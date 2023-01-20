@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <section class="tools-board">
+        <div class="row">
+            <label class="title">Figures</label>
+            <ul class="options">
+                <li class="option tool" id="rectangle">
+                    <span>Rectangle</span>
+                </li>
+                <li class="option">
+                    <label for="fill-color">Fill color</label>
+                    &nbsp;&nbsp;
+                    <input type="checkbox" id="fill-color">
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <label class="title">Options</label>
+            <ul class="options">
+                <li class="option active tool" id="brush">
+                    <span>Brush</span>
+                </li>
+                <li class="option tool" id="eraser">
+                    <span>Eraser</span>
+                </li>
+                <li class="option">
+                    <input type="range" id="size-slider" min="1" max="30" value="5">
+                </li>
+            </ul>
+        </div>
+        <div class="row colors">
+            <label class="title">Pick a color</label>
+            <ul class="options colors">
+                <li class="option"></li>
+                <li class="option selected"></li>
+                <li class="option"></li>
+                <li class="option"></li>
+                <hr>
+                <li class="last-optioned option">
+                    <input type="color" value="#4A98F7" id="color-picker">
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+    <section class="drawing-board">
+        <canvas></canvas>
+    </section>
+    <section class="tools-board">
+        <div class="row buttons">
+            <button class="upload-img" >Upload image</button>
+            <input type="file" class="upload-img-hidden" accept="image/jpeg, image/png, image/jpg" hidden>
+            <button class="undo-canvas">Undo <b>last</b></button>
+            <button class="clear-canvas">Clear Canvas</button>
+            <button class="save-img">Save As Image</button>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
